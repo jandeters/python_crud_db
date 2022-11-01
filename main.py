@@ -17,7 +17,9 @@ while(opcao!=6):
     [6] Sair ''')
     opcao = int(input("Escolha uma das opções: "))
     print("Opção escolhida: {}".format(opcao))
-
+  
+    if(opcao<=0 or opcao >=7):
+        print("Opção inválida. Informe a opção correta")
 
     if(opcao==1):
         print(" -------- CADASTRO DE ALUNOS ------- ")
@@ -31,7 +33,6 @@ while(opcao!=6):
         repo.listar()
 
     if(opcao==2):
-       
         nome2=input("Pesquisar pelo o nome: ")
         saida=repo.pesquisar(nome2)
         if not saida: 
@@ -40,4 +41,6 @@ while(opcao!=6):
             for aluno in saida:
                 print(" Nome: {} Matricula: {} CPF: {} Endereço:  {} ".format(aluno.nome, aluno.matricula,aluno.cpf,aluno.endereco))
                 print("------------------=----------------------------------------")    
-        
+     
+    if(opcao==6):   
+        print("Programa encerrado")
