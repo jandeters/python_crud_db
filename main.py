@@ -41,6 +41,13 @@ while(opcao!=6):
             for aluno in saida:
                 print(" Nome: {} Matricula: {} CPF: {} Endereço:  {} ".format(aluno.nome, aluno.matricula,aluno.cpf,aluno.endereco))
                 print("------------------=----------------------------------------")    
-     
+    if(opcao == 4):
+        print(" -------- DELETAR ALUNO ------- ")
+        cpf2=input("Informe o CPF: ")
+        if(repo.remover(cpf2)): 
+            print("Aluno excluído com sucesso "+cpf2)
+        else:
+            print("Aluno não encontrado")
+      
     if(opcao==6):   
         print("Programa encerrado")

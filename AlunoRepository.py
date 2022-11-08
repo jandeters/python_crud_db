@@ -16,6 +16,13 @@ class AlunoRepository():
                 lista.append(aluno)         
         return lista
 
+    def remover(self,cpf:str): 
+        excluido = False
+        for aluno in self.alunos:
+            if cpf in aluno.cpf:
+                self.alunos.remove(aluno) 
+                excluido = True       
+        return excluido
         
     def listar(self):
         print("------------------   Lista de alunos  ---------------------")
